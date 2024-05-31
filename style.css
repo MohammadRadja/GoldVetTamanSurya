@@ -616,7 +616,8 @@ mark, ins {
   text-decoration: underline;
 }
 .unstyle i {
-  color: #ffd100;margin-right: 10px;
+  color: #ffc26f;
+  margin-right: 10px;
 }
 
 .text-dark {
@@ -628,7 +629,7 @@ mark, ins {
 }
 
 .text-white .text-primary {
-  color: #f26522;
+  color: ##ffc26f;
 }
 
 a.text-white:hover {
@@ -1113,7 +1114,7 @@ section {
 }
 .main-navigation ul li a {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bolder;
   line-height: 1;
   padding: 52px 25px;
   color: #272023;
@@ -1401,20 +1402,25 @@ section {
   max-width: 400px;
 }
 .btn.btn-back-to-top {
-  background-color: #fff;
+  background-color: transparent;
   font-size: 14px;
   line-height: 25px;
   padding: 7px 27px;
   border-radius: 0;
+  display: block;
+  position: fixed;  /* Tambahkan ini untuk membuat posisi tetap */
+  bottom: 20px;     /* Jarak dari bawah jendela tampilan */
+  right: 20px;      /* Jarak dari kanan jendela tampilan */
+  z-index: 1000;    /* Pastikan tombol berada di depan elemen lain */
 }
 .btn-back-to-top i {
-  color: #884a39;
+  color: #25d366;
   font-size: 50px;
   line-height: 34px;
   transition: text-shadow 0.3s ease; /* Efek transisi yang halus */
 }
 .btn-back-to-top i:hover {
-  text-shadow: 0 0 5px #ffc26f;/* Tambahkan bayangan teks saat dihover */
+  color: #ffc26f;/* Tambahkan bayangan teks saat dihover */
 }
 
 .footer-bottom {
@@ -1931,6 +1937,10 @@ p .btn-submit {
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
+}
+.square-img {
+  margin-top: 125px;
+  border-radius: 15px;
 }
 .about-content {
   position: relative; 
@@ -2769,8 +2779,8 @@ div:last-child >.process .process-icon:after {
   margin-left: 12px;
 }
 .slick-dots li.slick-active button {
-  border-color: #ffd100; 
-  background-color: #ffd100;
+  border-color: #ffc26f; 
+  background-color: #ffc26f;
 }
 .slick-dots li button {
   border: 1px solid #b7b7b7; 
@@ -4097,7 +4107,7 @@ input[type=checkbox]:checked:after {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 767px){
+@media (max-width: 768px){
   section {
     padding: 90px 0;
   }
@@ -4127,7 +4137,7 @@ input[type=checkbox]:checked:after {
   .slider .slider-content {
     bottom: 100px; 
   }
-  .slider .slider-content h1 {
+  .slider .slider-content h2 {
     font-size: 30px;
   }
   .slider .slider-content h4 {
@@ -4147,6 +4157,12 @@ input[type=checkbox]:checked:after {
   }
   .text-mb-left {
     text-align: left;
+  }
+  .text-primary {
+    text-align: center;
+  }
+  .punchline {
+    text-align: center;
   }
   .process {
     text-align: left;
@@ -4266,10 +4282,10 @@ input[type=checkbox]:checked:after {
     bottom: 50px; 
     margin-left: 0;
   }
-  .slider .slider-content h1 {
-    font-size: 24px;
+  .slider .slider-content h2 {
+    display: none;
   }
-  .slider .slider-content h4 {
+  .slider .slider-content h3 {
     display: none;
   }
   .slider .slider-content .btn {
