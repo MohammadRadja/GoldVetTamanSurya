@@ -656,6 +656,25 @@
     });
   }
 
+  function updateSlider() {
+    var pageHeader = document.querySelector(".page-header");
+    var pageTitle = document.querySelector(".page-title");
+    var breadcrumbs = document.querySelector(".breadcrumbs");
+    if (window.innerWidth <= 767) {
+      pageHeader.style.background = "#ffc26f";
+      pageTitle.style.color = "#884a39";
+      breadcrumbs.style.color = "#fff";
+    } else {
+      pageHeader.style.background =
+        "url('/images/Slider/About/SliderAbout.webp') no-repeat center center";
+      pageHeader.style.backgroundPosition = "center";
+    }
+  }
+  // Run on initial load
+  updateSlider();
+  // Run on window resize
+  window.addEventListener("resize", updateSlider);
+
   // Initialize popup as usual
   if ($(".image-link").length) {
     $(".image-link").magnificPopup({

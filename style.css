@@ -4107,7 +4107,7 @@ input[type=checkbox]:checked:after {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   section {
     padding: 90px 0;
   }
@@ -4283,7 +4283,9 @@ input[type=checkbox]:checked:after {
     margin-left: 0;
   }
   .slider .slider-content h2 {
-    display: none;
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 15%;
   }
   .slider .slider-content h3 {
     display: none;
