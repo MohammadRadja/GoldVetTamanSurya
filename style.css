@@ -3264,6 +3264,15 @@ div:last-child >.process .process-icon:after {
 /*--------------------------------------------------------------
 ## Reservasi    
 --------------------------------------------------------------*/
+/* CSS untuk tampilan desktop */
+.container-custom {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Tengah secara horizontal */
+  align-items: center; /* Tengah secara vertikal */
+  padding: 0;
+}
+
 #reservation {
   display: flex;
   align-items: center;
@@ -3271,31 +3280,96 @@ div:last-child >.process .process-icon:after {
   min-height: 100vh;
   padding: 20px;
 }
+
 .reservation-form {
   width: 100%;
-  max-width: 600px;
-  margin: 20px;
+  max-width: 600px; /* Atur lebar maksimum untuk desktop */
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
 }
+
 .form-group {
   margin-bottom: 1rem;
 }
+
 .form-group label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
 }
-.form-group input, .form-group select, .form-group textarea {
+
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
 }
+
 .form-group textarea {
   resize: vertical;
+}
+
+/* CSS untuk tampilan mobile */
+@media (max-width: 768px) {
+  #reservation {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Pastikan formulir tetap di tengah layar vertikal */
+  }
+
+  .reservation-form {
+    width: 100%;
+    max-width: 100%; /* Memastikan formulir tidak terlalu lebar di perangkat kecil */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 0; /* Hilangkan margin untuk memastikan formulir benar-benar di tengah */
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    padding: 0.4rem;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* CSS untuk perangkat kecil (ponsel) */
+@media (max-width: 480px) {
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 12px;
+    padding: 0.4rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
 
 /*--------------------------------------------------------------
