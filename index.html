@@ -93,7 +93,17 @@
                     <li class="menu-item current-menu-ancestor current-menu-parent"
                     ><a href="index.html">Home</a></li>
                     <li class="menu-item"><a href="about.html">About</a></li>
-					          <li class="menu-item"><a href="services.html">Services</a></li>
+					          <li class="menu-item menu-item-has-children">
+                      <a href="services.html">Services</a>
+                      <ul class="sub-menu">
+                        <li class="menu-item">
+                          <a href="services.html">Services</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="visit.html">Visit</a>
+                        </li> 
+                      </ul>
+                    </li>
                     <li class="menu-item menu-item-has-children">
                       <a href="gallery.html">Gallery</a>
                       <ul class="sub-menu">
@@ -147,7 +157,17 @@
                     <li class="menu-item current-menu-ancestor current-menu-parent"
                     ><a href="index.html">Home</a></li>
                     <li class="menu-item"><a href="about.html">About</a></li>
-                    <li class="menu-item"><a href="services.html">Services</a></li>
+                    <li class="menu-item menu-item-has-children">
+                      <a href="services.html">Services</a>
+                      <ul class="sub-menu">
+                        <li class="menu-item">
+                          <a href="services.html">Services</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="visit.html">Visit</a>
+                        </li> 
+                      </ul>
+                    </li>
                     <li class="menu-item menu-item-has-children">
                       <a href="gallery.html">Gallery</a>
                       <ul class="sub-menu">
@@ -204,52 +224,84 @@
             </div>
           </div>
         </div>
-
-        <!-- <div>
-          <div class="slider-item">
-            <img
-              src="/images/Slider/foto2.webp"
-              alt=""
-              class=""
-              loading="lazy"
-            />
-            <div class="container">
-              <div class="row">
-                <div class="col-md-9">
-                  <div class="slider-content">
-                    <h2>klinik Hewan Yang Tepat Pilihan Keluarga</h2>
-                    <h3></h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div>
-          <div class="slider-item">
-            <img
-              src="/images/Slider/foto3.webp"
-              alt=""
-              class="" 
-              loading="lazy"
-            />
-            <div class="container">
-              <div class="row">
-                <div class="col-md-9">
-                  <div class="slider-content">
-                    <h2>Klinik Hewan Pilihan Keluarga</h2>
-                    <h3></h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
-	  <!-- Slider Home Section End  -->
+  <!-- Slider Home Section End  -->
 
-	  
+ <!-- Reservation Form Start -->
+ <section id="reservation">
+    <div class="row justify-content-center">
+      <div class="col-md-12 reservation-form">
+        <h2 class="text-center">Reservasi Online</h2>
+        <p class="text-center">Isi formulir di bawah ini untuk membuat reservasi dengan dokter kami.</p>
+        <form id="reservationForm" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Masukkan nama lengkap" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Nomor Telepon</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Masukkan nomor telepon" required>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="date">Tanggal Reservasi</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="time">Waktu Reservasi</label>
+                <input type="time" id="time" name="time" class="form-control" required>
+            </div>
+        </div>
+          <div class="form-group">
+            <label for="service">Layanan</label>
+            <select id="service" name="service" class="form-control" required>
+              <option value="">Pilih Layanan</option>
+              <option value="general_checkup">Pemeriksaan Umum</option>
+              <option value="vaccination">Vaksinasi</option>
+              <option value="sterilization">Sterilisasi</option>
+              <option value="minor_surgery">Operasi Minor</option>
+              <option value="major_surgery">Operasi Mayor</option>
+              <option value="ultrasound">USG</option>
+              <option value="blood_chemistry">Cek Kimia Darah</option>
+              <option value="hematology">Cek Hematologi</option>
+              <option value="dental_scaling">Scaling Gigi</option>
+              <option value="grooming">Grooming</option>
+              <option value="nebulizer">Nebulizer</option>
+              <option value="inpatient_care">Rawat Inap</option>
+              <option value="home_visit">Home Visit</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="animal_type">Jenis Hewan</label>
+            <select id="animal_type" name="animal_type" class="form-control" required>
+              <option value="">Pilih Jenis Hewan</option>
+              <option value="dog">Anjing</option>
+              <option value="cat">Kucing</option>
+              <option value="other">Hewan Lainnya</option>
+              <!-- Tambahkan opsi lain sesuai kebutuhan -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="breed">Ras</label>
+            <input type="text" id="breed" name="breed" class="form-control" placeholder="Masukkan ras hewan" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Usia</label>
+            <input type="text" id="age" name="age" class="form-control" placeholder="Masukkan usia hewan" required>
+          </div>
+          <div class="form-group">
+            <label for="complaint">Keluhan</label>
+            <textarea id="complaint" name="complaint" class="form-control" rows="4" placeholder="Tuliskan keluhan hewan" required></textarea>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Kirim Reservasi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</section>
+<!-- Reservation Form End -->
+
 	<!-- About Section Start  -->
 			<section>
 				<div class="container">
@@ -455,8 +507,8 @@
                 <!-- Service 1 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Checkup.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-user-md"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -471,8 +523,8 @@
                 <!-- Service 2 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Vaksin.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-syringe"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -487,8 +539,8 @@
                 <!-- Service 3 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Steril.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -503,8 +555,8 @@
                 <!-- Service 4 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Operasimayorminor.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-medkit"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -519,8 +571,8 @@
                 <!-- Service 5 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Operasimayorminor.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-user-nurse"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -535,8 +587,8 @@
                 <!-- Service 6 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Usg.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-camera"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -551,8 +603,8 @@
                 <!-- Service 7 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Kimiadarah.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-flask"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -567,8 +619,8 @@
                 <!-- Service 8 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Hematologi.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-microscope"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -583,8 +635,8 @@
                 <!-- Service 9 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Scalling.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-tooth"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -599,8 +651,8 @@
                 <!-- Service 10 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Grooming.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-bath"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -615,8 +667,8 @@
                 <!-- Service 11 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Nebulizer.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-wind"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -631,8 +683,8 @@
                 <!-- Service 12 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
-                      <img src="images/Services/Rawatinap.png" alt="ServicesPhoto" loading="lazy">
+                    <div class="services-icon">
+                      <i class="fas fa-bed"></i>
                     </div>
                     <div class="services-content">
                       <h3>
@@ -647,7 +699,7 @@
                 <!-- Service 13 -->
                 <div class="services-item">
                   <div class="services-box">
-                    <div class="services-icon col-md-4">
+                    <div class="services-icon">
                       <i class="fas fa-home"></i>
                     </div>
                     <div class="services-content">
@@ -923,7 +975,6 @@
         </div>
     </section>
 <!-- Gallery Section End  -->
-  </div>
 	  
 		<!-- Promo Section Start  -->
 		<section>
@@ -1342,5 +1393,38 @@
         'currency': 'IDR'
       });
     </script>
+
+<script>
+  document.getElementById('reservationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value;
+    var service = document.getElementById('service').value;
+    var petType = document.getElementById('animal_type').value; // Changed from 'petType' to 'animal_type'
+    var breed = document.getElementById('breed').value;
+    var age = document.getElementById('age').value;
+    var complaint = document.getElementById('complaint').value;
+
+    var Message = `https://wa.me/6281288891619?text=` +
+      `*Formulir Reservasi Gold Vet Taman Surya*%0A%0A` +
+      `*Nama Lengkap:* ${encodeURIComponent(name)}%0A` +
+      `*Nomor Telepon:* ${encodeURIComponent(phone)}%0A` +
+      `*Tanggal Reservasi:* ${encodeURIComponent(date)}%0A` +
+      `*Waktu Reservasi:* ${encodeURIComponent(time)}%0A` +
+      `*Layanan yang Dipilih:* ${encodeURIComponent(service)}%0A%0A` +
+      `*Informasi Hewan:*%0A` +
+      `  *Jenis Hewan:* ${encodeURIComponent(petType)}%0A` +
+      `  *Ras:* ${encodeURIComponent(breed)}%0A` +
+      `  *Usia:* ${encodeURIComponent(age)}%0A%0A` +
+      `*Detail Keluhan:*%0A` +
+      `${encodeURIComponent(complaint)}%0A%0A` +
+      `Terima kasih atas reservasi Anda! Kami akan segera menghubungi Anda untuk konfirmasi lebih lanjut.`;
+
+    window.open(Message, '_blank');
+  });
+</script>
   </body>
 </html>
