@@ -3314,6 +3314,7 @@ div:last-child >.process .process-icon:after {
   resize: vertical;
 }
 
+
 /* CSS untuk tampilan mobile */
 @media (max-width: 768px) {
   #reservation {
