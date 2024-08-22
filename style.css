@@ -907,6 +907,28 @@ td {
   background-color: #884a39 ;
   color: #fff;
 }
+.btn-whatsapp {
+  background-color: #25D366; /* Hijau WhatsApp */
+  color: #fff; /* Teks putih */
+  border: none; /* Tanpa border */
+  transition: background-color 0.3s ease; /* Animasi transisi */
+}
+.btn-whatsapp:hover {
+  background-color: #20b358; /* Warna hijau yang lebih gelap saat hover */
+  color: #fff; /* Teks tetap putih */
+}
+.btn-emergency {
+  background-color: #FF4C4C; /* Warna merah mencolok untuk darurat */
+  color: #fff; /* Teks putih */
+  border: none; /* Tanpa border */
+  transition: background-color 0.3s ease; /* Animasi transisi */
+}
+
+.btn-emergency:hover {
+  background-color: #d43f3f; /* Warna merah lebih gelap saat hover */
+  color: #fff; /* Teks tetap putih */
+}
+
 .btn-default {
   background-color: #f2f4f6;
   color: #03132b;
